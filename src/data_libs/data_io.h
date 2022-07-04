@@ -3,5 +3,7 @@
 
 void input(double *data, int n);
 void output(double *data, int n);
+int check_u_int();
+int printf(const char *__restrict, ...);
 
 #endif

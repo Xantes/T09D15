@@ -1,14 +1,24 @@
-void main()
-{
-    double *data;
-    int n;
-    
-    //Don`t forget to allocate memory !
+// #include <stdio.h>
+#include <stdlib.h>
 
-    input(data, n);
+#include "../data_libs/data_io.h"
+#include "../data_libs/data_stat.h"
+#include "data_process.h"
+int check_u_int();
 
-    if (normalization(data, n))
-        output(data, n);
-    else
-        printf("ERROR");  
+int main() {
+  double *data;
+  int n;
+
+  n = check_u_int(&n);
+  printf("N - %d", n);
+  data = calloc(n, sizeof(double));
+  // Don`t forget to allocate memory !
+
+  input(data, n);
+
+  if (normalization(data, n))
+    output(data, n);
+  else
+    printf("ERROR");
 }
