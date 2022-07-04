@@ -1,4 +1,3 @@
-// #include <stdio.h>
 #include <stdlib.h>
 
 #include "../data_libs/data_io.h"
@@ -11,14 +10,15 @@ int main() {
   int n;
 
   n = check_u_int(&n);
-  printf("N - %d", n);
   data = calloc(n, sizeof(double));
   // Don`t forget to allocate memory !
 
   input(data, n);
-
-  if (normalization(data, n))
+  if (normalization(data, n)) {
     output(data, n);
-  else
+  } else {
     printf("ERROR");
+  }
+
+  free(data);
 }

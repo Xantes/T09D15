@@ -7,7 +7,6 @@ void input(double *data, int n) {
   for (int i = 0; i < n; i++) {
     if (scanf("%lf", &tmp) == 1) {
       data[i] = tmp;
-      printf("%lf ", data[i]);
     }
   }
 }
@@ -16,6 +15,7 @@ void output(double *data, int n) {
   for (int i = 0; i < n; i++) {
     printf("%.2lf ", data[i]);
   }
+  printf("\n");
 }
 
 int check_u_int() {

@@ -1,29 +1,25 @@
 #include "data_stat.h"
 
 #include <math.h>
-#include <stdio.h>
 
 double max(double *data, int n) {
   double max = 0;
-  max = data[1];
+  max = data[0];
   for (int i = 0; i < n; i++) {
     if (data[i] > max) {
       max = data[i];
     }
   }
-  printf("MAX - %lf", max);
   return max;
 }
 double min(double *data, int n) {
   double min = 0;
-  min = data[1];
+  min = data[0];
   for (int i = 0; i < n; i++) {
-    if (data[i] > min) {
+    if (data[i] < min) {
       min = data[i];
     }
   }
-
-  printf("MIN - %lf", min);
   return min;
 }
 
